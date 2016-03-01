@@ -1,0 +1,24 @@
+---
+- name: Add apt key
+  apt_key:
+    keyserver: keys.gnupg.net
+    id: A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
+    state: present
+
+- name: Add Tor repository
+  apt_repository:
+    repo: deb http://deb.torproject.org/torproject.org jessie main
+    state: present
+
+- name: Add Tor repository (src)
+  apt_repository:
+    repo: deb-src http://deb.torproject.org/torproject.org jessie main
+    state: present
+
+- name: Install Tor packages
+  apt:
+    name:
+      - tor
+      - tor-arm
+    update_cache: yes
+    state: latest
