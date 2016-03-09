@@ -22,3 +22,9 @@
       - tor-arm
     update_cache: yes
     state: latest
+
+- name: Configure tor
+  template:
+    src: torrc
+    dest: /etc/tor/torrc
+    owner: root

@@ -1,6 +1,0 @@
----
-- name: Create toripi user
-  user:
-    name: toripi
-    password: $6$tUAxZGRVqu2Xd.2$Cu91KdythdsnW7ZL7pYxiKbk9XblIs8GtZ1xLRV/aTk3px1vHjgZRODqTAS.lNxAuc36q2ZR7X11jkhgKHW5b/
-    state: present
